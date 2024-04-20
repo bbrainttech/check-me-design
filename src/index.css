@@ -1,17 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --primary: 330, 100%, 48%, 1;
-    --primary-foreground: 330, 92%, 99%, 1;
-    
 
-    --secondary: 330, 100%, 48%, 1;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Color themes */
+    --primary: 330 100% 48%;
+    --secondary: 237 29% 35%;
+    --secondary-foreground:219 13% 46%;
+    --background: 0 0% 100% 1;
+    --accent:330 92% 99%;
 
-    --background:0, 0%, 100%, 1;
-    --foreground: 0 0% 100%;
+    /* Font imports */
+    --font-poppins: "Poppins", sans-serif;
   }
 }
