@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,15 +6,34 @@
 
 @layer base {
   :root {
-
     /* Color themes */
+
     --primary: 330 100% 48%;
-    --secondary: 237 29% 35%;
-    --secondary-foreground:219 13% 46%;
-    --background: 0 0% 100% 1;
-    --accent:330 92% 99%;
+    --secondary: 235 30% 20%;
+    --secondary-foreground: 219 13% 46%;
+    --background: 0 0% 100%;
+    --accent: 330 92% 99%;
+    --foreground: 0 0% 20%;
 
     /* Font imports */
     --font-poppins: "Poppins", sans-serif;
   }
+
+  .box {
+    @apply lg:w-[85%] w-[93%] mx-auto max-w-screen-2xl;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.1em;
+  height: 0.1em;
+}
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+
+::selection {
+  background: hsl(var(--primary) / 0.25);
 }

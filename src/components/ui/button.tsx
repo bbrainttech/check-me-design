@@ -4,13 +4,13 @@ import { cn } from "~/utils";
 
 
 const buttonVariants = cva(
-  "inline-flex items-center rounded-md justify-center whitespace-nowrap text-sm font-medium ring-offset-[background] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center capitalize rounded-lg justify-center whitespace-nowrap text-sm font-medium ring-offset-[background] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         default: "bg-primary  text-white hover:bg-primary/70",
         outline:
-          "border border-primary bg-background hover:bg-accent text-primary",
+          "border border-primary bg-transparent hover:bg-accent text-primary",
         secondary:
           "bg-secondary text-white hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:border hover:text-primary",

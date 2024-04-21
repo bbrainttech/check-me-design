@@ -11,6 +11,7 @@ export default {
       colors: {
         accent: "hsl(var(--accent))",
         primary: "hsl(var(--primary))",
+        foreground: "hsl(var(--foreground))",
         background: "hsl(var(--background))",
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
