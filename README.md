@@ -4,19 +4,20 @@
 
 ## Getting started
 
-- ### Step 1
+- ### Step 1 : Clone repo
 
 ```shell
   git clone https://github.com/bbrainttech/check-me-design.git
 ```
-clone public repo
 
-- ### Step 2
+- ### Step 2 : install Dependences
 
 ```shell
 npm install
 ```
-install local dependences
 
-- ### Step 3
-run `npm run dev` 'or'
+- ### Step 3 : Run dev server
+
+```bash
+npm run dev
+```
