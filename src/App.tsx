@@ -1,16 +1,17 @@
 import { ChevronRight } from "lucide-react";
-import "./App.css";
-import { Footer, NavBar } from "./components";
+import { FAQ, Footer, Icons, NavBar, Prompt, Reviews } from "./components";
 import { Button } from "./components/ui/button";
-import { useMediaQuery } from "./hooks";
+import Perks from "./components/Perks";
 
 const App = () => {
-  const md = useMediaQuery("(min-width: 768px)");
   return (
-    <section className="">
+    <section className="max-w-[1900px] mx-auto">
       <NavBar />
       <header className="mt-16 box">
-        <div className="mx-auto w-full max-w-[838px]">
+        <div className=" w-full left-0 overflow-hidden absolute top-0 z-0  ">
+          <Icons.HeroGrid className="w-full scale-150 sm:scale-100" />
+        </div>
+        <div className="mx-auto w-full max-w-[838px] z-10 relative  ">
           <h1 className="font-bold text-3xl sm:text-3xl md:text-4xl lg:text-[56px] leading-[45px] lg:leading-[85px] text-center text-balance ">
             Transforming{" "}
             <span className="text-primary">Breast Cancer Care</span>, One
@@ -21,9 +22,15 @@ const App = () => {
             communication, effortless appointment management, and a more
             empowered healthcare experience.
           </p>
-          <div className="flex justify-center mt-6 gap-x-8 items-center">
-            <Button size={md ? "lg" : "sm"}>our services</Button>
-            <Button size={md ? "lg" : "sm"} variant={"outline"}>
+          <div className="flex justify-center mt-6 gap-8 items-center flex-wrap">
+            <Button className="h-8 md:h-12 px-3 md:px-8" size={"lg"}>
+              our services
+            </Button>
+            <Button
+              className="h-8 md:h-12 px-3 md:px-8"
+              size={"lg"}
+              variant={"outline"}
+            >
               contact us
               <ChevronRight
                 aria-hidden
@@ -38,15 +45,15 @@ const App = () => {
         <img
           src="src/assets/images/hero-img.jpg"
           alt="hero image"
-          loading="lazy"
-          className="max-h-[712px] w-full object-cover rounded-t-lg brightness-75"
+          loading="eager"
+          className="max-h-[712px] w-full object-cover md:rounded-t-lg brightness-75"
         />
       </div>
-      <div className="bg-secondary py-20 text-[hsl(240_15%_94%)]">
-        <div className="box gap-y-8 md:gap-y-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-start items-start place-items-center md:gap-x-7">
-          <div className="">
+      <div className="bg-secondary z-10 relative py-20 text-[hsl(240_15%_94%)] ">
+        <div className="box gap-y-8 lg:gap-y-0 grid md:grid-cols-4  lg:grid-cols-5 place-content-start items-start place-items-center ">
+          <div className="col-span-2">
             <p className="text-sm">About CheckMe</p>
-            <h2 className="font-bold mt-2 leading-9 md:leading-[50px] text-2xl sm:text-3xl lg:text-4xl text-balance">
+            <h2 className="font-bold mt-2 leading-9 lg:leading-[50px] text-2xl sm:text-3xl lg:text-4xl text-balance">
               Founded on Love, Loss, and a Commitment to{" "}
               <span className="text-primary">
                 Empower Patients and Specialists
@@ -54,8 +61,8 @@ const App = () => {
               .
             </h2>
           </div>
-          <div className="h-48 w-[0.5px] bg-background/20 lg:block hidden  self-center"></div>
-          <div className="">
+          <div className="h-64 w-[0.5px] bg-background/20 lg:block hidden  self-center  col-span-1"></div>
+          <div className=" col-span-2 md:ml-4">
             <p className="text-sm font-light leading-6 opacity-70">
               Check Me is more than a platform—it's a promise. A promise to
               honor a sister's legacy, to uplift those affected by breast
@@ -65,15 +72,21 @@ const App = () => {
             </p>
             <div className="flex gap-8 flex-wrap mt-6">
               <div className="[&>p]:text-sm [&>p]:opacity-70 [&>p]:mt-2 text-center">
-                <h3 className="font-bold text-2xl  lg:text-[40px] sm:text-3xl">100+</h3>
+                <h3 className="font-bold text-2xl  lg:text-[40px] sm:text-3xl">
+                  100+
+                </h3>
                 <p>Active Users</p>
               </div>
               <div className="[&>p]:text-sm [&>p]:opacity-70 [&>p]:mt-2 text-center">
-                <h3 className="font-bold text-2xl  lg:text-[40px] sm:text-3xl">1K+</h3>
+                <h3 className="font-bold text-2xl  lg:text-[40px] sm:text-3xl">
+                  1K+
+                </h3>
                 <p>Medical Specialists</p>
               </div>
               <div className="[&>p]:text-sm [&>p]:opacity-70 [&>p]:mt-2 text-center">
-                <h3 className="font-bold text-2xl sm:text-3xl  lg:text-[40px]">100%</h3>
+                <h3 className="font-bold text-2xl sm:text-3xl  lg:text-[40px]">
+                  100%
+                </h3>
                 <p>Free for Patients</p>
               </div>
             </div>
@@ -91,6 +104,20 @@ const App = () => {
           </div>
         </div>
       </div>
+
+      {/* Perks sectio */}
+      <Perks />
+
+      {/* Reviews section */}
+      <Reviews />
+
+      {/*FAQ section */}
+      <FAQ />
+
+      {/* Prompt section */}
+      <Prompt />
+
+      {/* Foter section */}
       <Footer />
     </section>
   );
