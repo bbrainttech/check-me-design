@@ -1,6 +1,4 @@
-# DESIGN FILE
-
-<!-- ## React, CSS TailwindCSS -->
+# React, Typescript, CSS, TailwindCSS
 
 ## Getting started
 
