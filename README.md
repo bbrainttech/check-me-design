@@ -1,10 +1,7 @@
 # React, Typescript, CSS, TailwindCSS
-<div style='display:flex;justify-content:center'>
 <img src='public/preview/iPhone-13-PRO-MAX.png'
-style='max-height:400px'
+style='height:400px'
 />
-
-</div>
 ## Getting started
 
 - ### Step 1 : Clone repo
