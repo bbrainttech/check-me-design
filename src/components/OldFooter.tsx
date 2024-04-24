@@ -35,21 +35,33 @@ export default () => {
             </p>
             <Link
               to={""}
-              className={cn(buttonVariants({
-                className: "bg-[hsl(237,29%,35%)] gap-x-4",
-              }))}
+              className={cn(
+                buttonVariants({
+                  className: "bg-[hsl(237,29%,35%)] gap-x-4",
+                })
+              )}
             >
               <Download className="-rotate-90 size-5" aria-hidden />
               Subscribe as Specialist
             </Link>
           </div>
           <div className="mt-24 max-w-72 flex flex-col items-center">
-            <Icons.LinkedinWhite />
+            <Link to={""}>
+              <Icons.LinkedinWhite />
+            </Link>
             <div className="mt-10 flex flex-wrap text-sm opacity-80 [&>a]:text-background gap-x-7 justify-center font-medium [&>a]:px-0">
-              <Link to={""} className={buttonVariants({variant:'link',})}>Features</Link>
-              <Link to={""} className={buttonVariants({variant:'link',})}>Updates</Link>
-              <Link to={""} className={buttonVariants({variant:'link',})}>Imprint</Link>
-              <Link to={""} className={buttonVariants({variant:'link',})}>Privacy Policy</Link>
+              <Link to={""} className={buttonVariants({ variant: "link" })}>
+                Features
+              </Link>
+              <Link to={""} className={buttonVariants({ variant: "link" })}>
+                Updates
+              </Link>
+              <Link to={""} className={buttonVariants({ variant: "link" })}>
+                Imprint
+              </Link>
+              <Link to={""} className={buttonVariants({ variant: "link" })}>
+                Privacy Policy
+              </Link>
             </div>
           </div>
         </div>
