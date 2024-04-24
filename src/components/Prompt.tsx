@@ -1,13 +1,13 @@
 import { ChevronRight } from "lucide-react";
-import { Button } from "./ui/button";
-import {img_prompt1,img_prompt2,img_prompt3} from '~/assets/images'
+import { Button, buttonVariants } from "./ui/button";
+import { img_prompt1, img_prompt2, img_prompt3 } from "~/assets/images";
+import { Link } from "react-router-dom";
 
 export default () => {
   return (
     <section className="py-20 min-h-[40em] bg-accent">
       <div className="box">
         <div className="flex flex-col items-center relative h-[40em] rounded-full overflow-hidden justify-center">
-
           <div className="absolute hidden sm:block">
             <div className="size-48 md:size-80 aspect-square border rounded-full relative animate-spin duration-20k origin-center">
               <div className="absolute rounded-full bg-secondary size-8 md:size-12 right-3 top-3 md:right-6 md:top-6"></div>
@@ -61,14 +61,18 @@ export default () => {
               navigate their journey.
             </p>
             <div className="mt-6 flex justify-center">
-              <Button size={"lg"}>
+              <Link
+                target="_blank"
+                to={"/old-landing-page"}
+                className={buttonVariants({ size: "lg" })}
+              >
                 Donate now{" "}
                 <ChevronRight
                   aria-hidden
                   strokeWidth={1.2}
                   className="size-4 ml-0.5 group-hover:rotate-180 transition duration-300"
                 />
-              </Button>
+              </Link>
             </div>
           </div>
         </div>

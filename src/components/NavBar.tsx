@@ -1,12 +1,12 @@
 import { BarChartIcon, ChevronDown, Globe } from "lucide-react";
 import { ButtonHTMLAttributes, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useMediaQuery } from "~/hooks";
 import { cn } from "~/utils";
 import { LANGUAGES, NAV_LINKS } from "~/utils/constants";
 import { Icons, SideBarSheet } from "./";
 import { Dropdown } from "./ui";
-import { Button, ButtonProps } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 
 export default () => {
   const [isOpen, setOpen] = useState(false);
@@ -19,7 +19,6 @@ export default () => {
   };
 
   return (
-    <>
       <nav className="sticky top-0 h-[85px] bg-background/90 backdrop-blur-sm  z-50">
         <div className="box flex items-center justify-between h-full mx-auto ">
           <div className="">
@@ -28,7 +27,7 @@ export default () => {
           <div className="lg:hidden flex  z-50">
             <SideBarSheet closeSideBar={closeSideBar} isOpen={isOpen} />
             <Button
-            aria-label="open drawer"
+              aria-label="open drawer"
               variant={"ghost"}
               onClick={openSideBar}
               size={"icon"}
@@ -45,7 +44,6 @@ export default () => {
           </div>
         </div>
       </nav>
-    </>
   );
 };
 
@@ -55,7 +53,7 @@ interface NavLinkProps {
     li?: string;
   };
   sheetOpenned?: boolean;
-  contactBtnProps?: ButtonProps;
+  contactBtnProps?: ButtonHTMLAttributes<HTMLAnchorElement>;
   dropdownProps?: ButtonHTMLAttributes<HTMLDivElement>;
   overideLock?: boolean;
 }
@@ -72,9 +70,9 @@ export const NavLinks = ({
   return (
     <>
       <ul className={cn("flex gap-x-5", classNames?.parent)}>
-        {NAV_LINKS.map(link => (
+        {NAV_LINKS.map((link) => (
           <li key={link.title}>
-            <NavLink 
+            <NavLink
               tabIndex={sheetOpenned || lg ? 0 : -1}
               to={link.href}
               className={({ isActive }) =>
@@ -114,9 +112,16 @@ export const NavLinks = ({
         </li>
       </ul>
 
-      <Button tabIndex={sheetOpenned || lg ? 0 : -1} {...contactBtnProps}>
+      <Link
+        to={"/"}
+        tabIndex={sheetOpenned || lg ? 0 : -1}
+        {...contactBtnProps}
+        className={buttonVariants({
+          className: contactBtnProps?.className,
+        })}
+      >
         Contact Us
-      </Button>
+      </Link>
     </>
   );
 };

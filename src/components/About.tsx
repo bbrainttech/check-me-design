@@ -1,5 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { RATES } from "~/utils/constants";
 
 export default () => {
   return (
@@ -24,24 +25,18 @@ export default () => {
             is to ensure that no one faces breast cancer alone.
           </p>
           <div className="flex gap-8 flex-wrap mt-6">
-            <div className="[&>p]:text-sm [&>p]:opacity-70 [&>p]:mt-2 text-center">
-              <h3 className="font-bold text-2xl  lg:text-[40px] sm:text-3xl">
-                100+
-              </h3>
-              <p>Active Users</p>
-            </div>
-            <div className="[&>p]:text-sm [&>p]:opacity-70 [&>p]:mt-2 text-center">
-              <h3 className="font-bold text-2xl  lg:text-[40px] sm:text-3xl">
-                1K+
-              </h3>
-              <p>Medical Specialists</p>
-            </div>
-            <div className="[&>p]:text-sm [&>p]:opacity-70 [&>p]:mt-2 text-center">
-              <h3 className="font-bold text-2xl sm:text-3xl  lg:text-[40px]">
-                100%
-              </h3>
-              <p>Free for Patients</p>
-            </div>
+            {RATES.map(({ quote, state, value }) => (
+              <div
+                className="[&>p]:text-sm [&>p]:opacity-70 [&>p]:mt-2 text-center"
+                key={quote}
+              >
+                <h3 className="font-bold text-2xl  lg:text-[40px] sm:text-3xl">
+                  {value}
+                  {state}
+                </h3>
+                <p>{quote}</p>
+              </div>
+            ))}
           </div>
           <Button
             variant={"outline"}

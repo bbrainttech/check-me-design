@@ -145,9 +145,9 @@ export default ({
                 onClick={() => handleChange(item)}
                 onKeyDown={(e) => handleKeyDown(e, i)}
                 className={cn(
-                  "focus-visible:outline-none overflow-hidden hover:bg-secondary/10 text-left w-full focus-visible:ring-1 focus-visible:ring-secondary/50 text-base  cursor-pointer p-1.5 rounded-md ",
+                  "focus-visible:outline-none overflow-hidden hover:bg-primary/5 hover:text-primary  text-left w-full focus-visible:ring-1 focus-visible:ring-primary/50 text-base  cursor-pointer p-1.5 rounded-md ",
                   {
-                    "bg-secondary/10 ": selectedItem?.id === item.id,
+                    "bg-primary/10  text-primary": selectedItem?.id === item.id,
                   }
                 )}
                 tabIndex={isOpen ? 0 : -1}

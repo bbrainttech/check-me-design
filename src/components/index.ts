@@ -1,9 +1,15 @@
+export { default as About } from "./About";
 export { default as FAQ } from "./FAQ";
 export { default as Footer } from "./Footer";
+export { default as Header } from "./Header";
 export { default as Icons } from "./Icons";
 export { default as NavBar } from "./NavBar";
+export { default as OldFooter } from "./OldFooter";
+export { default as OldHeader } from "./OldHeader";
+export { default as OldNavBar } from "./OldNavBar";
+export { default as OldPerks } from "./OldPerks";
 export { default as Perks } from "./Perks";
 export { default as Prompt } from "./Prompt";
-export { default as SideBarSheet } from "./SideBarSheet";
 export { default as Reviews } from "./Reviews";
-
+export { default as ScrollToTop } from "./ScrollToTop";
+export { default as SideBarSheet } from "./SideBarSheet";

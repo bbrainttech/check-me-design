@@ -36,7 +36,7 @@ const PerkCard = ({ i, ...perk }: PerkTypes & { i: number }) => {
           loading="lazy"
           className=" object-contain object-center size-full z-20 relative"
         />
-        <div className="hidden sm:block absolute bottom-0 left-1/5 bg-radial size-full rounded-full z-10"></div>
+        <div className="hidden sm:block absolute -bottom-4 left-1/5 bg-radial size-full rounded-full z-10"></div>
       </div>
       <div className="sm:w-1/2">
         <div className="text-sm font-medium text-secondary">
