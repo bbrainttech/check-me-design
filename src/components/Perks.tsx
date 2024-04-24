@@ -4,6 +4,7 @@ import { PERKS, PerkTypes } from "~/utils/constants";
 import { Button } from "./ui/button";
 
 export default () => {
+
   return (
     <section className="py-16">
       <div className="box">
@@ -13,6 +14,7 @@ export default () => {
           ))}
         </div>
       </div>
+
     </section>
   );
 };
@@ -31,6 +33,7 @@ const PerkCard = ({ i, ...perk }: PerkTypes & { i: number }) => {
         <img
           src={`src/assets/images/ui/${perk.img}.png`}
           alt={perk.title}
+          loading="lazy"
           className=" object-contain object-center size-full z-20 relative"
         />
         <div className="hidden sm:block absolute bottom-0 left-1/5 bg-radial size-full rounded-full z-10"></div>
@@ -44,13 +47,14 @@ const PerkCard = ({ i, ...perk }: PerkTypes & { i: number }) => {
         </h2>
         <div className="mt-3">
           <p className="text-sm">{perk.content}</p>
-          <ul className="mt-2 list- list-disc marker:text-primary gap-y-4">
+          <ul className="mt-2 list-disc marker:text-primary">
             {perk.list_items.map((item, i) => (
-              <li key={i.toString()} className="text-sm font-light ml-3">
+              <li key={i.toString()} className="text-sm font-light ml-3 mt-2">
                 {item}
               </li>
             ))}
           </ul>
+
           <Button className="mt-6" size={"sm"} variant={"outline"}>
             read more{" "}
             <ChevronRight

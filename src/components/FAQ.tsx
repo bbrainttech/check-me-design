@@ -1,7 +1,8 @@
 import { MinusCircle, PlusCircle } from "lucide-react";
-import { useState } from "react";
+import { KeyboardEvent, RefObject, useRef, useState } from "react";
+import { useOnClickOutside } from "~/hooks";
 import { cn } from "~/utils";
-import { FAQ, FAQTypes } from "~/utils/constants";
+import { CONTROL_KEYS, FAQ, FAQTypes } from "~/utils/constants";
 
 export default () => {
   const [Faq, setFaqs] = useState<FAQTypes[]>(FAQ);
@@ -13,6 +14,9 @@ export default () => {
         isDrop: !current.isDrop && i === id,
       }))
     );
+  const ulRef = useRef<HTMLUListElement>(null);
+
+  useOnClickOutside(ulRef, () => setFaqs(FAQ));
 
   return (
     <section className="py-20">
@@ -24,9 +28,15 @@ export default () => {
           Everything you need to know about Check Me for Cancer warriors and
           medical specialists
         </p>
-        <ul className="mt-10 max-w-4xl mx-auto ">
+        <ul className="mt-10 max-w-4xl mx-auto " ref={ulRef}>
           {Faq.map((faq, i) => (
-            <FAQItem i={i} onOpen={dropFaq} {...faq} key={i.toString()} />
+            <FAQItem
+              i={i}
+              ulRef={ulRef}
+              onOpen={dropFaq}
+              {...faq}
+              key={i.toString()}
+            />
           ))}
         </ul>
       </div>
@@ -34,25 +44,60 @@ export default () => {
   );
 };
 
+interface FAQItemProps extends FAQTypes {
+  i: number;
+  onOpen: (i: number) => void;
+  ulRef: RefObject<HTMLUListElement>;
+}
 const FAQItem = ({
   i,
   isDrop,
   question,
   answer,
   onOpen,
-}: FAQTypes & { i:number,onOpen: (i:number) => void }) => {
-  let n=0;
-  return (
-    <li onKeyUp={(e)=>{
-      if(e.code === 'ArrowUp'){
-        n+=1;
-        e.preventDefault()
-        
-        console.log(n)
-        onOpen(n)
+  ulRef,
+}: FAQItemProps) => {
+  const handleKeyDown = (e: KeyboardEvent<HTMLLIElement>) => {
+    const listItems = ulRef.current?.getElementsByTagName("li");
 
-      }
-    }} onClick={()=>onOpen(i)} className="py-6 rounded-lg border-b border-secondary/10  focus-visible:outline-none focus-visible:bg-accent focus-visible:ring-[0.25px] ring-offset-4  ring-primary" tabIndex={0}>
+    if (!CONTROL_KEYS.includes(e.key)) return;
+
+    const target = e.key;
+    const triggerIndex = i;
+    const triggerCount = FAQ.length;
+    if (triggerIndex === -1) return;
+
+    e.preventDefault();
+
+    let nextIndex = triggerIndex;
+    const homeIndex = 0;
+    const endIndex = triggerCount - 1;
+
+    const moveNext = () => {
+      nextIndex = triggerIndex + 1;
+      if (nextIndex > endIndex) nextIndex = homeIndex;
+    };
+    const movePrev = () => {
+      nextIndex = triggerIndex - 1;
+      if (nextIndex < homeIndex) nextIndex = endIndex;
+    };
+
+    if (target === "ArrowUp" || target === "ArrowLeft") movePrev();
+    else if (target === "ArrowDown" || target === "ArrowRight") moveNext();
+
+    const clampedIndex = nextIndex % triggerCount;
+    listItems?.[clampedIndex].focus();
+    onOpen(clampedIndex);
+  };
+
+  return (
+    <li
+      onKeyDown={handleKeyDown}
+      onClick={() => onOpen(i)}
+      className="py-6 rounded-lg border-b border-secondary/10  focus-visible:outline-none focus-visible:bg-accent focus-visible:ring-[0.25px] ring-offset-4  ring-primary"
+      tabIndex={0}
+      aria-label={`faq-${question}`}
+    >
       <div>
         <div
           className={cn(
@@ -103,4 +148,3 @@ const FAQItem = ({
     </li>
   );
 };
-

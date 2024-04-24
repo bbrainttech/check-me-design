@@ -8,25 +8,27 @@ export default () => {
         <div className="flex flex-col items-center relative h-[40em] rounded-full overflow-hidden justify-center">
 
           <div className="absolute hidden sm:block">
-            <div className="size-48 md:size-80 aspect-square border-2 rounded-full relative animate-spin duration-20k origin-center">
+            <div className="size-48 md:size-80 aspect-square border rounded-full relative animate-spin duration-20k origin-center">
               <div className="absolute rounded-full bg-secondary size-8 md:size-12 right-3 top-3 md:right-6 md:top-6"></div>
               <div className="absolute rounded-full bg-secondary size-12 md:size-20 left-10  -bottom-2.5 overflow-hidden animate-spin direction-reverse origin-center duration-20k">
                 <img
                   src="/src/assets/images/prompt/3.png"
                   alt="prompt user 3"
                   className="size-full object-cover rounded-full"
+                  loading="lazy"
                 />
               </div>
             </div>
           </div>
 
           <div className="absolute animate-spin direction-reverse duration-25k">
-            <div className="size-[20rem] md:size-[35rem] border-2 rounded-full relative">
+            <div className="size-[20rem] md:size-[35rem] border rounded-full relative">
               <div className="absolute rounded-full bg-secondary size-8 md:size-12 right-8 top-8 md:right-14 md:top-14"></div>
               <div className="absolute rounded-full bg-secondary size-16 md:size-20 left-4 md:left-10 bottom-4  md:bottom-10">
                 <img
                   src="/src/assets/images/prompt/1.png"
                   alt="prompt user 1"
+                  loading="lazy"
                   className="size-full object-cover rounded-full animate-spin  origin-center duration-25k"
                 />
               </div>
@@ -34,12 +36,13 @@ export default () => {
           </div>
 
           <div className="absolute animate-spin origin-center duration-30k">
-            <div className="size-[30em] md:size-[50rem] border-2 rounded-full relative">
+            <div className="size-[30em] md:size-[50rem] border rounded-full relative">
               <div className="absolute rounded-full bg-secondary size-10 md:size-12 md:right-24 right-[50px] top-[50px] md:top-24"></div>
               <div className="absolute rounded-full bg-secondary size-16 md:size-20 left-10 bottom-10 md:left-20 md:bottom-20">
                 <img
                   src="/src/assets/images/prompt/2.png"
                   alt="prompt user 2"
+                  loading="lazy"
                   className="size-full object-cover rounded-full animate-spin  origin-center duration-30k direction-reverse"
                 />
               </div>

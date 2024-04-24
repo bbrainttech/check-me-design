@@ -3,7 +3,7 @@ import { CLIENTS, ClientTypes } from "~/utils/constants";
 
 export default () => {
   return (
-    <section className="py-16 max-w-screen-lg mx-auto">
+    <section className="py-16  max-w-screen-lg mx-auto">
       <div className="box">
         <div className="text-primary font-medium text-base text-center">
           500+ Happy CheckMe Users
