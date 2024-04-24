@@ -1,4 +1,4 @@
-import { Download } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { RATES } from "~/utils/constants";
 import { buttonVariants } from "./ui/button";
@@ -37,12 +37,14 @@ export default () => {
               to={""}
               className={cn(
                 buttonVariants({
-                  className: "bg-[hsl(237,29%,35%)] gap-x-4",
+                  className: "bg-[hsl(237,29%,35%)] group transition-all duration-300 whitespace-break-spaces gap-x-4",
                 })
               )}
             >
-              <Download className="-rotate-90 size-5" aria-hidden />
+              <Download className="-rotate-90 size-5 transition-all duration-300 group-hover:size-0 group-hover:opacity-0" aria-hidden />
               Subscribe as Specialist
+              <ArrowRight aria-hidden className="group-hover:size-5 transition-all duration-300 size-0" />
+
             </Link>
           </div>
           <hr className="opacity-20 w-full my-20"/>

@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import { Icons } from "./";
 import { Button } from "./ui/button";
 
@@ -11,13 +12,16 @@ export default () => {
           </div>
             <Button
               aria-label="Download our playtore app"
-              className="gap-x-2"
+              className="gap-x-2 group transition-all duration-300 "
             >
               <Icons.PlayStore
                 aria-hidden
-                className="size-5"
+                className="size-5 transition-all duration-300 group-hover:size-0 group-hover:opacity-0"
               />
+
               get started
+              <ArrowRight className="group-hover:size-5 transition-all duration-300 size-0" />
+
             </Button>
   
         </div>
