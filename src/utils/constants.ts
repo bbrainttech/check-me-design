@@ -1,9 +1,14 @@
+import { LucideProps } from "lucide-react";
 import {
   img_BreastCancerWarriors,
   img_client1,
   img_client2,
   img_MedicalSpecialist,
+  img_phone_screen,
+  img_user1,
+  img_user2,
 } from "~/assets/images";
+import Icons from "~/components/Icons";
 
 type NavLinkType = {
   title: string;
@@ -129,4 +134,54 @@ export const PERKS = [
   },
 ] as const satisfies PerkTypes[];
 
+export interface OldPerkType {
+  title: string;
+  content: string;
+  Icon: (props: LucideProps) => JSX.Element;
+  img: string;
+}
+
+export const OLD_PERKS = [
+  {
+    title: "Interactive Self-Check Tutorials",
+    content: "Learn from others and get notified about health tips.",
+    img: img_user1,
+    Icon: Icons.PlayCircleFill,
+  },
+  {
+    title: "Access to Specialists",
+    content: "Search for and connect with healthcare specialists.",
+    img: img_phone_screen,
+    Icon: Icons.Dot,
+  },
+  {
+    title: "Geolocalization to Hospitals",
+    content: "Locate and navigate to the nearest healthcare facilities.",
+    img: img_user2,
+    Icon: Icons.Map,
+  },
+] as const satisfies OldPerkType[];
+
+export type RateType = {
+  value: string;
+  state: "+" | "%";
+  quote: string;
+};
+export const RATES = [
+  {
+    value: "100",
+    quote: "Active",
+    state: "+",
+  },
+  {
+    value: "1k",
+    quote: "Medical",
+    state: "+",
+  },
+  {
+    value: "100",
+    quote: "Free for",
+    state: "%",
+  },
+] as const satisfies RateType[];
 export const CONTROL_KEYS = ["ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight"];
