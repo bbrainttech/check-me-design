@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import Icons from "./Icons";
 import { buttonVariants } from "./ui/button";
 import { img_old_hero } from "~/assets/images";
+import { ArrowRight } from "lucide-react";
+import { cn } from "~/utils";
 
 export default () => {
   return (
@@ -17,13 +19,14 @@ export default () => {
         <div className="flex flex-col items-center">
           <Link
             to={""}
-            className={buttonVariants({
+            className={cn(buttonVariants({
               variant: "default",
               className:
-                "gap-x-2 px-2 whitespace-break-spaces text-base font-medium mt-5",
-            })}
+                "gap-x-2 px-2 group transition-all duration-500 whitespace-break-spaces text-base font-medium mt-5",
+            }))}
           >
-            <Icons.PlayStore className="size-5" />
+            <Icons.PlayStore className="size-5 transition-all duration-300 group-hover:size-0 group-hover:opacity-0" />
+            <ArrowRight className="group-hover:size-5 transition-all duration-500 size-0" />
             Download from Google Play Store{" "}
           </Link>
         </div>
