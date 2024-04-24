@@ -44,5 +44,20 @@ body::-webkit-scrollbar {
 
 
 @supports(animation-timeline:view()) {
-  @media(prefers-reduced-motion:no-preference) {}
+  @media(prefers-reduced-motion:no-preference) {
+    .reveal-zoom {
+      transform: scale(.3);
+      opacity: 0;
+      animation: reveal-zoom linear forwards;
+      animation-timeline: view();
+      animation-range-start: cover -50vh;
+      animation-range-end: contain;
+    }
+    @keyframes reveal-zoom {
+      to {
+        transform: scale(1);
+        opacity: 1
+      }
+    }
+  }
 }

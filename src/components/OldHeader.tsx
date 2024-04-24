@@ -28,7 +28,7 @@ export default () => {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col items-center ">
+      <div className="flex flex-col items-center reveal-zoom ">
         <div className="relative aspect-square  w-full sm:max-w-[50rem] sm:-top-20">
           <img
             src={img_old_hero}
