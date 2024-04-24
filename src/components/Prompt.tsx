@@ -1,5 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
+import {img_prompt1,img_prompt2,img_prompt3} from '~/assets/images'
 
 export default () => {
   return (
@@ -12,7 +13,7 @@ export default () => {
               <div className="absolute rounded-full bg-secondary size-8 md:size-12 right-3 top-3 md:right-6 md:top-6"></div>
               <div className="absolute rounded-full bg-secondary size-12 md:size-20 left-10  -bottom-2.5 overflow-hidden animate-spin direction-reverse origin-center duration-20k">
                 <img
-                  src="/src/assets/images/prompt/3.png"
+                  src={img_prompt3}
                   alt="prompt user 3"
                   className="size-full object-cover rounded-full"
                   loading="lazy"
@@ -26,7 +27,7 @@ export default () => {
               <div className="absolute rounded-full bg-secondary size-8 md:size-12 right-8 top-8 md:right-14 md:top-14"></div>
               <div className="absolute rounded-full bg-secondary size-16 md:size-20 left-4 md:left-10 bottom-4  md:bottom-10">
                 <img
-                  src="/src/assets/images/prompt/1.png"
+                  src={img_prompt1}
                   alt="prompt user 1"
                   loading="lazy"
                   className="size-full object-cover rounded-full animate-spin  origin-center duration-25k"
@@ -40,7 +41,7 @@ export default () => {
               <div className="absolute rounded-full bg-secondary size-10 md:size-12 md:right-24 right-[50px] top-[50px] md:top-24"></div>
               <div className="absolute rounded-full bg-secondary size-16 md:size-20 left-10 bottom-10 md:left-20 md:bottom-20">
                 <img
-                  src="/src/assets/images/prompt/2.png"
+                  src={img_prompt2}
                   alt="prompt user 2"
                   loading="lazy"
                   className="size-full object-cover rounded-full animate-spin  origin-center duration-30k direction-reverse"

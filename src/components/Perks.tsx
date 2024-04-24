@@ -31,7 +31,7 @@ const PerkCard = ({ i, ...perk }: PerkTypes & { i: number }) => {
     >
       <div className="relative  aspect-square sm:w-1/2 w-full sm:max-w-[27rem] ">
         <img
-          src={`src/assets/images/ui/${perk.img}.png`}
+          src={perk.img}
           alt={perk.title}
           loading="lazy"
           className=" object-contain object-center size-full z-20 relative"

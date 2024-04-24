@@ -98,7 +98,7 @@ export default ({
   return (
     <div ref={dropdownRef} className="relative w-full">
       <button
-        id={id.toString()}
+        aria-describedby={id}
         aria-label="Toggle dropdown"
         aria-haspopup="true"
         aria-expanded={isOpen}

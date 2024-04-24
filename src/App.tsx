@@ -9,6 +9,7 @@ import {
   Reviews,
 } from "./components";
 import { Button } from "./components/ui/button";
+import {img_hero} from "~/assets/images/"
 
 const App = () => {
   return (
@@ -50,7 +51,7 @@ const App = () => {
       </header>
       <div className="mt-20 ">
         <img
-          src="src/assets/images/hero-img.jpg"
+          src={img_hero}
           alt="hero image"
           loading="eager"
           className="max-h-[712px] w-full object-cover md:rounded-t-lg brightness-75"

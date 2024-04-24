@@ -28,6 +28,7 @@ export default () => {
           <div className="lg:hidden flex  z-50">
             <SideBarSheet closeSideBar={closeSideBar} isOpen={isOpen} />
             <Button
+            aria-label="open drawer"
               variant={"ghost"}
               onClick={openSideBar}
               size={"icon"}

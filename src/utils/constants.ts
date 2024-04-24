@@ -1,3 +1,10 @@
+import {
+  img_BreastCancerWarriors,
+  img_client1,
+  img_client2,
+  img_MedicalSpecialist,
+} from "~/assets/images";
+
 type NavLinkType = {
   title: string;
   href: string;
@@ -62,6 +69,7 @@ export const FAQ = [
 ].map((data, i) => ({ ...data, isDrop: i === 0 })) satisfies FAQTypes[];
 
 export type ClientTypes = {
+  img: string;
   name: string;
   star: 1 | 2 | 3 | 4 | 5;
   content: string;
@@ -70,6 +78,7 @@ export type ClientTypes = {
 
 export const CLIENTS = [
   {
+    img: img_client1,
     name: "Jenny Wilson",
     star: 5,
     job: "Breast Cancer Warrior",
@@ -77,6 +86,7 @@ export const CLIENTS = [
       "The personalized support and guidance I've received have made all the difference in my recovery. I'm grateful for Check Me team",
   },
   {
+    img: img_client2,
     name: "Devon Lane",
     star: 5,
     job: "Medical Specialist",
@@ -103,7 +113,7 @@ export const PERKS = [
       "Locate and navigate to the nearest healthcare facilities.",
       "Easily schedule and manage appointments with healthcare providers, ensuring timely access to care.",
     ],
-    img: "BreastCancerWarriors",
+    img: img_BreastCancerWarriors,
   },
   {
     sub_title: "CheckMe for medical Specialists",
@@ -115,7 +125,7 @@ export const PERKS = [
       "Secure Communication with Patients",
       "Eliminate paper prescriptions &  streamline medication management.",
     ],
-    img: "MedicalSpecialist",
+    img: img_MedicalSpecialist,
   },
 ] as const satisfies PerkTypes[];
 
