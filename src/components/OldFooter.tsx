@@ -45,7 +45,8 @@ export default () => {
               Subscribe as Specialist
             </Link>
           </div>
-          <div className="mt-24 max-w-72 flex flex-col items-center">
+          <hr className="opacity-20 w-full my-20"/>
+          <div className=" max-w-72 flex flex-col items-center">
             <Link to={""}>
               <Icons.LinkedinWhite />
             </Link>
