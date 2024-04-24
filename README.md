@@ -40,3 +40,9 @@ npm run build
    production server : npm run preview
 
 ```
+
+### How to open old landing page design
+
+This button in the New landing page opens the old design
+
+![How to open old Landing page](/public/preview/to-old-design.png)
