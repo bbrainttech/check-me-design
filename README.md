@@ -1,7 +1,12 @@
 # React, Typescript, CSS, TailwindCSS
+<div style="display:flex;gap:40px">
 <img src='public/preview/iPhone-13-PRO-MAX.png'
 style='height:400px'
 />
+<img src='public/preview/Galaxy-Fold2.png'
+style='height:400px'
+/>
+</div>
 ## Getting started
 
 - ### Step 1 : Clone repo
