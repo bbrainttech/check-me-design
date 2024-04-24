@@ -1,5 +1,5 @@
 # React, Typescript, CSS, TailwindCSS
-<div style="display:flex;gap:40px">
+<div style="display:flex;gap:60px;justify-content:center">
 <img src='public/preview/iPhone-13-PRO-MAX.png'
 style='height:400px'
 />
