@@ -1,11 +1,9 @@
 # React, Typescript, CSS, TailwindCSS
-<div style='display:flex;justify-content:center;gap:40px'>
+<div style='display:flex;align-items:center;justify-content:center;gap:40px'>
 <img src='public/preview/iPhone-13-PRO-MAX.png'
 style='max-width:300px'
 />
-<img src='public/preview/Galaxy-Fold2.png'
-style='max-width:500px'
-/>
+
 </div>
 ## Getting started
 
