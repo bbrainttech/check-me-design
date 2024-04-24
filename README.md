@@ -1,5 +1,5 @@
 # React, Typescript, CSS, TailwindCSS
-[iPhone-13-PRO-MAX](public/preview/iPhone-13-PRO-MAX.png)
+![iPhone-13-PRO-MAX](public/preview/iPhone-13-PRO-MAX.png)
 ## Getting started
 
 - ### Step 1 : Clone repo
