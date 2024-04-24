@@ -19,31 +19,31 @@ export default () => {
   };
 
   return (
-      <nav className="sticky top-0 h-[85px] bg-background/90 backdrop-blur-sm  z-50">
-        <div className="box flex items-center justify-between h-full mx-auto ">
-          <div className="">
-            <Icons.Logo />
-          </div>
-          <div className="lg:hidden flex  z-50">
-            <SideBarSheet closeSideBar={closeSideBar} isOpen={isOpen} />
-            <Button
-              aria-label="open drawer"
-              variant={"ghost"}
-              onClick={openSideBar}
-              size={"icon"}
-              className="bg-secondary/5 hover:bg-secondary/10 size-9 hover:border-0"
-            >
-              <BarChartIcon
-                aria-hidden
-                className="size-5 text-secondary -rotate-90"
-              />
-            </Button>
-          </div>
-          <div className="hidden lg:flex items-center gap-x-10 ">
-            <NavLinks />
-          </div>
+    <nav className="sticky top-0 h-[85px] bg-background/90 backdrop-blur-sm  z-50">
+      <div className="box flex items-center justify-between h-full mx-auto ">
+        <div className="">
+          <Icons.Logo />
         </div>
-      </nav>
+        <div className="lg:hidden flex  z-50">
+          <SideBarSheet closeSideBar={closeSideBar} isOpen={isOpen} />
+          <Button
+            aria-label="open drawer"
+            variant={"ghost"}
+            onClick={openSideBar}
+            size={"icon"}
+            className="bg-secondary/5 hover:bg-secondary/10 size-9 hover:border-0"
+          >
+            <BarChartIcon
+              aria-hidden
+              className="size-5 text-secondary -rotate-90"
+            />
+          </Button>
+        </div>
+        <div className="hidden lg:flex items-center gap-x-10 ">
+          <NavLinks />
+        </div>
+      </div>
+    </nav>
   );
 };
 
@@ -66,6 +66,11 @@ export const NavLinks = ({
   contactBtnProps,
 }: NavLinkProps) => {
   const lg = useMediaQuery("(min-width:1024px)");
+
+  const onSelect = (id: number) => {
+    console.log(id)
+    // Function runs when dropdown item is selected
+  };
 
   return (
     <>
@@ -106,6 +111,7 @@ export const NavLinks = ({
               id="Language-selection"
               title="select language"
               LeftIcon={Globe}
+              onSelect={onSelect}
               overideLock={overideLock}
             />
           </div>

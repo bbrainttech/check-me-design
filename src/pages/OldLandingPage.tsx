@@ -33,7 +33,7 @@ export default () => {
           </p>
           <Link
             to={""}
-            className={buttonVariants({ size: "sm", className: "mt-5" })}
+            className={buttonVariants({ size: "sm", className: "mt-5 gap-x-2" })}
           >
             <Icons.PlayStore className="size-5" />
             Download From Google Play Store

@@ -1,7 +1,7 @@
 import { ChevronRight } from "lucide-react";
-import { Button, buttonVariants } from "./ui/button";
-import { img_prompt1, img_prompt2, img_prompt3 } from "~/assets/images";
 import { Link } from "react-router-dom";
+import { img_prompt1, img_prompt2, img_prompt3 } from "~/assets/images";
+import { buttonVariants } from "./ui/button";
 
 export default () => {
   return (

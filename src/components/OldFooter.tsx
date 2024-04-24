@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { RATES } from "~/utils/constants";
 import { buttonVariants } from "./ui/button";
 import Icons from "./Icons";
+import { cn } from "~/utils";
 
 export default () => {
   return (
@@ -34,9 +35,9 @@ export default () => {
             </p>
             <Link
               to={""}
-              className={buttonVariants({
+              className={cn(buttonVariants({
                 className: "bg-[hsl(237,29%,35%)] gap-x-4",
-              })}
+              }))}
             >
               <Download className="-rotate-90 size-5" aria-hidden />
               Subscribe as Specialist
