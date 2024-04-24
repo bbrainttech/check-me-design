@@ -1,7 +1,14 @@
 import { ChevronRight } from "lucide-react";
-import { FAQ, Footer, Icons, NavBar, Prompt, Reviews } from "./components";
+import {
+  FAQ,
+  Footer,
+  Icons,
+  NavBar,
+  Perks,
+  Prompt,
+  Reviews,
+} from "./components";
 import { Button } from "./components/ui/button";
-import Perks from "./components/Perks";
 
 const App = () => {
   return (

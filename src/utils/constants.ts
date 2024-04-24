@@ -5,24 +5,11 @@ type NavLinkType = {
 }[];
 
 export const NAV_LINKS = [
-  {
-    title: "home",
-    href: "/",
-  },
-  { title: "about us", href: "/about-us" },
-  {
-    title: "services",
-    hasDropDown: true,
-    href: "/services-dropdown",
-  },
-  {
-    title: "blog",
-    href: "/blog",
-  },
-  {
-    title: "careers",
-    href: "/careers",
-  },
+  { title: "home", href: "/" },
+  { title: "about us", href: "/about" },
+  { title: "services", hasDropDown: true, href: "/s" },
+  { title: "blog", href: "/blog" },
+  { title: "careers", href: "/careers" },
 ] as const satisfies NavLinkType;
 
 export type Languages = "English" | "French" | "Kinyarwanda" | "Swahili";
@@ -131,3 +118,5 @@ export const PERKS = [
     img: "MedicalSpecialist",
   },
 ] as const satisfies PerkTypes[];
+
+export const CONTROL_KEYS = ["ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight"];

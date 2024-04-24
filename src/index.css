@@ -14,25 +14,27 @@
     --accent: 330 92% 99%;
     --foreground: 0 0% 20%;
 
-
     --font-poppins: "Poppins", sans-serif;
   }
 
   .box {
-    
     @apply lg:w-[85%] w-[93%] mx-auto max-w-screen-2xl;
   }
 }
 
 ::-webkit-scrollbar {
-  width: 0.1em;
-  height: 0.1em;
+  width: 0.2em;
+  height: 0.2em;
 }
 body::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+  width: 0.3em;
+  height: 0.3em;
 }
 
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: .05rem;
+}
 
 ::selection {
   background: hsl(var(--primary) / 0.25);
