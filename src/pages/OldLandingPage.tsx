@@ -4,7 +4,10 @@ import { Icons, OldFooter, OldHeader, OldNavBar, OldPerks } from "~/components";
 import { buttonVariants } from "~/components/ui/button";
 
 export default () => {
+
   return (
+    <>
+    <title>Check Me Old landing page</title>
     <section className="max-w-[1900px] mx-auto font-opensans font-normal">
       <OldNavBar />
       <OldHeader />
@@ -48,5 +51,6 @@ export default () => {
       <OldFooter />
       
     </section>
+            </>
   );
 };

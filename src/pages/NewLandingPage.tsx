@@ -1,9 +1,20 @@
-import { img_hero } from "~/assets/images"
-import { About, FAQ, Footer, Header, NavBar, Perks, Prompt, Reviews } from "~/components"
+import { img_hero } from "~/assets/images";
+import {
+  About,
+  FAQ,
+  Footer,
+  Header,
+  NavBar,
+  Perks,
+  Prompt,
+  Reviews,
+} from "~/components";
 
-export default ()=>{
-    return(
-        <section className="max-w-[1900px] mx-auto font-poppins">
+export default () => {
+  return (
+    <>
+      <title>Check Me New landing page</title>
+      <section className="max-w-[1900px] mx-auto font-poppins">
         <NavBar />
         <Header />
         <div className="mt-20">
@@ -16,23 +27,22 @@ export default ()=>{
         </div>
         {/* About section */}
         <About />
-  
+
         {/* Perks section */}
         <Perks />
-  
+
         {/* Reviews section */}
         <Reviews />
-  
+
         {/*FAQ section */}
         <FAQ />
-  
+
         {/* Prompt section */}
         <Prompt />
-  
+
         {/* Foter section */}
         <Footer />
-  
       </section>
-    
-    )
-}
+    </>
+  );
+};
