@@ -41,3 +41,8 @@ body::-webkit-scrollbar {
 ::selection {
   background: hsl(var(--primary) / 0.25);
 }
+
+
+@supports(animation-timeline:view()) {
+  @media(prefers-reduced-motion:no-preference) {}
+}
