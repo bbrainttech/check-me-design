@@ -126,9 +126,9 @@ export default ({
       <div
         aria-label="Dropdown menu"
         className={cn(
-          "absolute border p-1.5 right-0 top-4 scale-y-[.95] mt-2 opacity-0 transition-all duration-200  overflow-y-auto rounded-lg max-h-56 w-full lg:w-max shadow-lg bg-background",
+          "absolute pointer-events-none border p-1.5 right-0 top-4 scale-y-[.95] mt-2 opacity-0 transition-all duration-200  overflow-y-auto rounded-lg max-h-56 w-full lg:w-max shadow-lg bg-background",
           {
-            "opacity-100 top-full scale-y-100": isOpen,
+            "opacity-100 top-full scale-y-100 pointer-events-auto": isOpen,
           }
         )}
       >
