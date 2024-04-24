@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { img_francis } from "~/assets/images";
 import { Icons, OldFooter, OldHeader, OldNavBar, OldPerks } from "~/components";
@@ -36,10 +37,12 @@ export default () => {
           </p>
           <Link
             to={""}
-            className={buttonVariants({ size: "sm", className: "mt-5 gap-x-2" })}
+            className={buttonVariants({ size: "sm", className: "mt-5 group transition-all duration-300 whitespace-break-spaces gap-x-2" })}
           >
-            <Icons.PlayStore className="size-5" />
+            <Icons.PlayStore className="size-5 transition-all duration-300 group-hover:size-0 group-hover:opacity-0" />
             Download From Google Play Store
+            <ArrowRight className="group-hover:size-5 transition-all duration-300 size-0" />
+
           </Link>
         </section>
 
