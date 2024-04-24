@@ -13,7 +13,6 @@
     --foreground: 0 0% 20%;
     --muted: 0 0% 34%;
 
-
     /* Fonts */
     --font-poppins: "Poppins", sans-serif;
     --font-opensans: "Open Sans", sans-serif;
@@ -42,11 +41,11 @@ body::-webkit-scrollbar {
   background: hsl(var(--primary) / 0.25);
 }
 
-
-@supports(animation-timeline:view()) {
-  @media(prefers-reduced-motion:no-preference) {
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    
     .reveal-zoom {
-      transform: scale(.3);
+      transform: scale(0.3);
       opacity: 0;
       animation: reveal-zoom linear forwards;
       animation-timeline: view();
@@ -56,7 +55,7 @@ body::-webkit-scrollbar {
     @keyframes reveal-zoom {
       to {
         transform: scale(1);
-        opacity: 1
+        opacity: 1;
       }
     }
   }

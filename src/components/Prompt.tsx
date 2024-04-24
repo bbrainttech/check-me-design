@@ -5,7 +5,7 @@ import { buttonVariants } from "./ui/button";
 
 export default () => {
   return (
-    <section className="py-20 min-h-[40em] bg-accent">
+    <section className="py-20 min-h-[40em] bg-accent reveal-zoom">
       <div className="box">
         <div className="flex flex-col items-center relative h-[40em] rounded-full overflow-hidden justify-center">
           <div className="absolute hidden sm:block">
