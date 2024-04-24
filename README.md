@@ -1,7 +1,7 @@
 # React, Typescript, CSS, TailwindCSS
-<div style='display:flex;align-items:center;justify-content:center;gap:40px'>
+<div style='display:flex;justify-content:center'>
 <img src='public/preview/iPhone-13-PRO-MAX.png'
-style='max-width:300px'
+style='max-height:400px'
 />
 
 </div>
