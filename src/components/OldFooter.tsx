@@ -25,8 +25,8 @@ export default () => {
         </div>
         <div className="py-14 text-center flex flex-col items-center ">
           <div className="max-w-64 relative">
-            <Icons.FooterMark2 className="absolute top-0 size-6 xs:-right-28 right-3" />
-            <Icons.FooterMark1 className="absolute bottom-1/2 size-8 xs:-left-24  left-3" />
+            <Icons.FooterMark2 className="absolute top-0 size-6 xs:-right-28 right-3 hidden md:block " />
+            <Icons.FooterMark1 className=" hidden md:block absolute bottom-1/2 size-8 xs:-left-24  left-3" />
             <h2 className="text-xl sm:text-4xl tracking-tight font-semibold">
               Subscribe as Medical
             </h2>
@@ -66,7 +66,7 @@ export default () => {
                 Privacy Policy
               </Link>
             </div>
-          </div>
+          </div> 
         </div>
       </div>
     </footer>
