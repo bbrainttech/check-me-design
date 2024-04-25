@@ -41,7 +41,7 @@ export default () => {
           >
             <Icons.PlayStore className="size-5 transition-all duration-300 group-hover:size-0 group-hover:opacity-0" />
             Download From Google Play Store
-            <ArrowRight className="group-hover:size-5 transition-all duration-300 size-0" />
+            <ArrowRight  aria-hidden className="group-hover:size-5 transition-all duration-300 size-0" />
 
           </Link>
         </section>

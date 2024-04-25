@@ -8,7 +8,7 @@ export default () => {
       <nav className="sticky top-0 h-16 bg-background/90 backdrop-blur-sm  z-50">
         <div className="box flex items-center justify-between h-full mx-auto ">
           <div className="">
-            <Icons.Logo />
+            <Icons.Logo  />
           </div>
             <Button
               aria-label="Download our playtore app"
@@ -20,7 +20,7 @@ export default () => {
               />
 
               get started
-              <ArrowRight className="group-hover:size-5 transition-all duration-300 size-0" />
+              <ArrowRight  aria-hidden className="group-hover:size-5 transition-all duration-300 size-0" />
 
             </Button>
   
